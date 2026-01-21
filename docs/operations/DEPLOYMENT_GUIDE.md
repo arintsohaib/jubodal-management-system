@@ -4,16 +4,16 @@
 
 This document provides **step-by-step deployment procedures** for Bangladesh Jatiotabadi Jubodal Management System (BJDMS) to the production server.
 
-**Critical Constraint**: ALL deployment happens on **remote server only** (arint.win). Local machines are code-only environments.
+**Critical Constraint**: ALL deployment happens on **remote server only** (grayhawks.com). Local machines are code-only environments.
 
 ---
 
 ## Deployment Architecture
 
 **Target Server**:
-- **Host**: arint.win
+- **Host**: grayhawks.com
 - **OS**: Debian 13
-- **Access**: SSH only (`ssh root@arint.win -p 25920`)
+- **Access**: SSH only (`ssh root@grayhawks.com -p 25920`)
 - **Runtime**: Docker + Docker Compose
 - **Project Path**: `/opt/bjdms`
 
@@ -43,7 +43,7 @@ This document provides **step-by-step deployment procedures** for Bangladesh Jat
 
 ```bash
 # From local machine
-ssh root@arint.win -p 25920
+ssh root@grayhawks.com -p 25920
 ```
 
 **Verification**: `pwd` should show `/root` or similar.
@@ -68,7 +68,7 @@ git pull origin main
 # From local machine:
 rsync -avz -e "ssh -p 25920" \
   --exclude='.git' --exclude='node_modules' --exclude='*.env' \
-  /path/to/local/bjdms/ root@arint.win:/opt/bjdms/
+  /path/to/local/bjdms/ root@grayhawks.com:/opt/bjdms/
 ```
 
 **Verification**: `git log -1` shows latest commit.
@@ -98,7 +98,7 @@ JWT_REFRESH_SECRET=ANOTHER_RANDOM_SECRET
 
 # App
 NODE_ENV=production
-NEXT_PUBLIC_API_URL=https://arint.win/api/v1
+NEXT_PUBLIC_API_URL=https://grayhawks.com/api/v1
 
 # OpenSearch  
 OPENSEARCH_URL=http://opensearch:9200
@@ -221,7 +221,7 @@ curl http://localhost:3000/health
 **Public Health Check**:
 ```bash
 # From local machine or browser
-curl https://arint.win/api/v1/health
+curl https://grayhawks.com/api/v1/health
 ```
 
 ---
@@ -230,7 +230,7 @@ curl https://arint.win/api/v1/health
 
 **Test Authentication**:
 ```bash
-curl -X POST https://arint.win/api/v1/auth/login \
+curl -X POST https://grayhawks.com/api/v1/auth/login \
   -H "Content-Type: application/json" \
   -d '{"phone": "+880XXXXXXXXX", "password": "test_password"}'
 ```
@@ -347,7 +347,7 @@ docker-compose up -d
 ### 4. Verify
 
 ```bash
-curl https://arint.win/api/v1/health
+curl https://grayhawks.com/api/v1/health
 ```
 
 **Rollback Time**: Target < 5 minutes.
@@ -401,7 +401,7 @@ SMS/Dashboard notification:
 Even for "development", use remote server:
 
 ```bash
-# On arint.win, create dev environment
+# On grayhawks.com, create dev environment
 mkdir /opt/bjdms-dev
 cd /opt/bjdms-dev
 
@@ -409,7 +409,7 @@ cd /opt/bjdms-dev
 docker-compose -f docker-compose.dev.yml up -d
 ```
 
-**Access**: `https://arint.win/dev/`
+**Access**: `https://grayhawks.com/dev/`
 
 ---
 
@@ -419,7 +419,7 @@ docker-compose -f docker-compose.dev.yml up -d
 
 **Location**: Same server, different directory (`/opt/bjdms-staging`)
 
-**Domain**: `https://arint.win/staging/` or subdomain
+**Domain**: `https://grayhawks.com/staging/` or subdomain
 
 **Process**:
 1. Deploy to staging first
@@ -433,7 +433,7 @@ docker-compose -f docker-compose.dev.yml up -d
 
 **Location**: `/opt/bjdms`
 
-**Domain**: `https://arint.win` or `https://bjdms.arint.win`
+**Domain**: `https://grayhawks.com` or `https://bjdms.grayhawks.com`
 
 **Process**: Follow main deployment steps above.
 

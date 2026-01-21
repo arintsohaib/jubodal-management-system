@@ -234,8 +234,9 @@ When an AI agent is instructed:
 
 ## Ownership
 
-System Owner: Bangladesh Nationalist Jubo Dal
-Architecture Authority: Greayhawk Sentinel Ltd.
+System Owner: Grayhawk Sentinel Ltd.
+Architecture Authority: Grayhawk Sentinel Ltd.
+Official Website: https://grayhawks.com
 
 ---
 

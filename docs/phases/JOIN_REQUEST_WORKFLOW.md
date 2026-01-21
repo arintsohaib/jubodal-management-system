@@ -210,7 +210,7 @@ PATCH /api/v1/join-requests/{id}
    Welcome to Bangladesh Jubo Dal!
    Your account: +8801712345678
    Initial password: Temp@1234
-   Login: https://bjdms.arint.win
+   Login: https://grayhawks.com/login
    Please change your password immediately.
    ```
 
@@ -237,7 +237,7 @@ PATCH /api/v1/join-requests/{id}
 Your join request (JR-2026-0001234) has been approved!
 Login: +8801712345678
 Password: Temp@1234
-Change password: https://bjdms.arint.win/login
+Change password: https://grayhawks.com/login
 ```
 
 ---
@@ -299,7 +299,7 @@ For inquiries, contact your local Jubo Dal office.
 ```
 Congratulations! You have been assigned as Member of Ward 5 Committee, Joypurhat.
 You now have full dashboard access.
-Login: https://bjdms.arint.win
+Login: https://grayhawks.com/login
 ```
 
 ---

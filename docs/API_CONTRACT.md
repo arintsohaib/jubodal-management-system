@@ -11,7 +11,7 @@ If this file stays consistent, backend, frontend, and mobile clients will never 
 
 ## Global Rules
 
-* Base URL (dev): [https://arint.win](https://arint.win)
+* Base URL (dev): [https://grayhawks.com](https://grayhawks.com)
 * All APIs are versioned: `/api/v1/`
 * Authentication: JWT (Bearer Token)
 * All responses are JSON

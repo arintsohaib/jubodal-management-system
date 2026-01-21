@@ -108,7 +108,7 @@ func TestCommitteeService_Create_SavesToDatabase(t *testing.T) {
 ```javascript
 test('committee leader can create and dissolve committee', async ({ page }) => {
   // Login
-  await page.goto('https://arint.win/login');
+  await page.goto('https://grayhawks.com/login');
   await page.fill('[name=phone]', '+8801712345678');
   await page.fill('[name=password]', 'TestPass123');
   await page.click('button[type=submit]');
@@ -282,8 +282,8 @@ func TestJoinRequestApproval_SendsSMS(t *testing.T) {
 **Remember**: No local execution allowed per user rules.
 
 ```bash
-# On arint.win
-ssh root@arint.win -p 25920
+# On grayhawks.com
+ssh root@grayhawks.com -p 25920
 cd /opt/bjdms
 
 # Run unit tests
@@ -352,7 +352,7 @@ export let options = {
 };
 
 export default function() {
-  let res = http.get('https://arint.win/api/v1/activities');
+  let res = http.get('https://grayhawks.com/api/v1/activities');
   check(res, {
     'status is 200': (r) => r.status === 200,
     'response time < 500ms': (r) => r.timings.duration < 500,

@@ -4,14 +4,14 @@
 
 Defines **Continuous Integration and Continuous Deployment (CI/CD) pipeline** for BJDMS.
 
-**Critical Constraint**: All builds and deployments execute on **remote server (arint.win)** only. No local builds.
+**Critical Constraint**: All builds and deployments execute on **remote server (grayhawks.com)** only. No local builds.
 
 ---
 
 ## Pipeline Architecture
 
 ```
-Git Push → GitHub/GitLab → Webhook → arint.win → Build → Test → Deploy
+Git Push → GitHub/GitLab → Webhook → grayhawks.com → Build → Test → Deploy
 ```
 
 **Trigger**: Push to `main` branch or Pull Request
@@ -135,7 +135,7 @@ jobs:
 
 ### Remote Deployment Script
 
-**Webhook on arint.win**:
+**Webhook on grayhawks.com**:
 
 **/opt/bjdms/scripts/deploy.sh**:
 ```bash
@@ -210,10 +210,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to arint.win
+      - name: Deploy to grayhawks.com
         uses: appleboy/ssh-action@master
         with:
-          host: arint.win
+          host: grayhawks.com
           username: root
           port: 25920
           key: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -224,7 +224,7 @@ jobs:
       - name: Verify deployment
         run: |
           sleep 30
-          curl -f https://arint.win/api/v1/health || exit 1
+          curl -f https://grayhawks.com/api/v1/health || exit 1
       
       - name: Notify team
         if: success()
@@ -234,7 +234,7 @@ jobs:
         if: failure()
         uses: appleboy/ssh-action@master
         with:
-          host: arint.win
+          host: grayhawks.com
           username: root
           port: 25920
           key: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -249,7 +249,7 @@ jobs:
 ## Pipeline Secrets
 
 **GitHub Secrets** (Settings → Secrets):
-- `SSH_PRIVATE_KEY`: SSH key for arint.win access
+- `SSH_PRIVATE_KEY`: SSH key for grayhawks.com access
 - `DATABASE_URL`: Production database connection string (for migrations)
 - `JWT_SECRET`: JWT signing key
 - `SMS_API_KEY`: SMS gateway credentials
@@ -261,7 +261,7 @@ jobs:
 ## Build Artifacts
 
 **Docker Images**:
-- Built on remote server (arint.win)
+- Built on remote server (grayhawks.com)
 - Tagged with git commit SHA: `bjdms-api:abc1234`
 - Stored in local Docker registry or Docker Hub (optional)
 

@@ -1,6 +1,6 @@
 # 🦅 BJDMS: The Neo-Cyber Organizational Core
 
-[![Live at](https://img.shields.io/badge/Live-arint.win-blue?style=for-the-badge&logoColor=white)](https://arint.win)
+[![Live at](https://img.shields.io/badge/Official-grayhawks.com-blue?style=for-the-badge&logoColor=white)](https://grayhawks.com)
 [![Stack](https://img.shields.io/badge/Stack-Go_1.25_%7C_Python_3.14_%7C_Next.js_16-emerald?style=for-the-badge)](https://github.com/arintsohaib/jubodal-management-system)
 
 The **Bangladesh Jatiotabadi Jubodal Management System (BJDMS)** is a state-of-the-art, enterprise-grade administrative backbone designed to digitize and optimize one of Bangladesh's largest youth organizations. 
@@ -73,15 +73,15 @@ git clone https://github.com/arintsohaib/jubodal-management-system.git
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
 
-**Live Production Target**: `arint.win`  
+**Official Website**: [grayhawks.com](https://grayhawks.com)  
 **Infrastructure**: Debian 13, Traefik Reverse Proxy, TLS 1.3 Encryption.
 
 ---
 
 ## 📜 Legal & Management
-- **System Owner**: Bangladesh Nationalist Jubo Dal
-- **Architecture**: Greayhawk Sentinel Ltd.
-- **Implementation**: Developed by Antigravity AI (Google DeepMind) for arint.win.
+- **System Owner**: Grayhawk Sentinel Ltd.
+- **Architecture & Implementation**: Grayhawk Sentinel Ltd.
+- **Official Website**: [grayhawks.com](https://grayhawks.com)
 
 ---
 *Digitizing the future of grassroots leadership in Bangladesh.*

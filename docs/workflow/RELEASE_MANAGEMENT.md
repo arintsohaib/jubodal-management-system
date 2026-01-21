@@ -91,7 +91,7 @@ git push origin v1.1.0-rc1
 
 **Deploy to Staging**:
 ```bash
-ssh root@arint.win -p 25920
+ssh root@grayhawks.com -p 25920
 cd /opt/bjdms-staging
 git checkout v1.1.0-rc1
 ./scripts/deploy.sh
@@ -142,7 +142,7 @@ git push origin main
 
 **Deploy**:
 ```bash
-ssh root@arint.win -p 25920
+ssh root@grayhawks.com -p 25920
 cd /opt/bjdms
 git checkout v1.1.0
 ./scripts/deploy.sh
@@ -229,7 +229,7 @@ git push origin v1.1.2
 
 **Deploy Immediately** (no waiting for release window):
 ```bash
-ssh root@arint.win -p 25920
+ssh root@grayhawks.com -p 25920
 cd /opt/bjdms
 git checkout v1.1.2
 ./scripts/deploy.sh
@@ -307,7 +307,7 @@ Learn more: [Release Notes]
 ### 3. Execute Rollback
 
 ```bash
-ssh root@arint.win -p 25920
+ssh root@grayhawks.com -p 25920
 cd /opt/bjdms
 git checkout v1.0.1  # Previous stable version
 ./scripts/deploy.sh

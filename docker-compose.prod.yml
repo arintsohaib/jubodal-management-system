@@ -21,7 +21,7 @@ services:
           memory: 512M
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.bjdms-api.rule=Host(`arint.win`) && PathPrefix(`/api`)"
+      - "traefik.http.routers.bjdms-api.rule=Host(`grayhawks.com`) && PathPrefix(`/api`)"
       - "traefik.http.routers.bjdms-api.entrypoints=websecure"
       - "traefik.http.routers.bjdms-api.tls.certresolver=myresolver"
 
@@ -32,7 +32,7 @@ services:
           memory: 1G
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.bjdms-web.rule=Host(`arint.win`)"
+      - "traefik.http.routers.bjdms-web.rule=Host(`grayhawks.com`)"
       - "traefik.http.routers.bjdms-web.entrypoints=websecure"
       - "traefik.http.routers.bjdms-web.tls.certresolver=myresolver"
 
@@ -43,6 +43,6 @@ services:
           memory: 2G
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.bjdms-analytics.rule=Host(`arint.win`) && PathPrefix(`/analytics`)"
+      - "traefik.http.routers.bjdms-analytics.rule=Host(`grayhawks.com`) && PathPrefix(`/analytics`)"
       - "traefik.http.routers.bjdms-analytics.entrypoints=websecure"
       - "traefik.http.routers.bjdms-analytics.tls.certresolver=myresolver"

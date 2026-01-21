@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Defines **monitoring, observability, and alerting strategy** for BJDMS running on arint.win.
+Defines **monitoring, observability, and alerting strategy** for BJDMS running on grayhawks.com.
 
 **Goal**: Detect issues before users experience them, maintain 99.5% uptime.
 
@@ -65,7 +65,7 @@ ing Stack
 
 ### Application Health Endpoint
 
-**URL**: `https://arint.win/api/v1/health`
+**URL**: `https://grayhawks.com/api/v1/health`
 
 **Response**:
 ```json

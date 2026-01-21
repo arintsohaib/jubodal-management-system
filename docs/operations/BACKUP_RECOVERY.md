@@ -209,7 +209,7 @@ find $BACKUP_DIR -maxdepth 1 -type d -name "minio_*" -mtime +28 -exec rm -rf {} 
 
 1. **Provision New Server**:
    - Same specs (Debian 13, Docker)
-   - Same domain (arint.win) pointing to new IP
+   - Same domain (grayhawks.com) pointing to new IP
 
 2. **Install Dependencies**:
    ```bash
