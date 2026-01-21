@@ -1,0 +1,32 @@
+services:
+  traefik:
+    image: traefik:latest
+    container_name: traefik
+    command:
+      - "--log.level=DEBUG"
+      - "--api.insecure=false"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+      - "--certificatesresolvers.myresolver.acme.email=admin@arint.win"
+      - "--certificatesresolvers.myresolver.acme.storage=/letscert/acme.json"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - "traefik_certs:/letscert"
+    environment:
+      - DOCKER_API_VERSION=1.44
+    networks:
+      - bjdms_network
+    restart: always
+
+volumes:
+  traefik_certs:
+
+networks:
+  bjdms_network:
+    external: true
