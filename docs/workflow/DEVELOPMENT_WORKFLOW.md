@@ -123,7 +123,7 @@ git push origin feature/add-municipality-level
 3. **Write tests** alongside code
 4. **Run tests locally** (on remote server):
    ```bash
-   ssh root@arint.win -p 25920
+   ssh root@grayhawks.com -p 25920
    cd /opt/bjdms
    go test ./...
    ```
@@ -281,7 +281,7 @@ P0 (Critical) / P1 (High) / P2 (Medium) / P3 (Low)
 
 1. **Access Setup**:
    - GitHub/GitLab access
-   - SSH key for arint.win
+   - SSH key for grayhawks.com
    - Slack/Discord
 
 2. **Read Documentation**:
@@ -291,7 +291,7 @@ P0 (Critical) / P1 (High) / P2 (Medium) / P3 (Low)
 
 3. **Environment Setup**:
    - Clone repository
-   - SSH to arint.win
+   - SSH to grayhawks.com
    - Run test suite
 
 ---

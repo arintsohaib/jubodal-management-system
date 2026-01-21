@@ -1,4 +1,4 @@
-const API_URL = (typeof process !== "undefined" && process.env.NEXT_PUBLIC_API_URL) || "https://arint.win/api/v1";
+const API_URL = (typeof process !== "undefined" && process.env.NEXT_PUBLIC_API_URL) || "https://grayhawks.com/api/v1";
 
 async function fetchWithAuth(endpoint: string, options: RequestInit = {}) {
     const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;

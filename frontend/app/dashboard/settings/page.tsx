@@ -59,7 +59,7 @@ export default function SettingsPage() {
                                 <div className="space-y-2">
                                     <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">System Environment</label>
                                     <div className="flex items-center gap-2 h-10 px-4 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 text-sm font-bold">
-                                        <Server className="w-4 h-4" /> Production (arint.win)
+                                        <Server className="w-4 h-4" /> Production (grayhawks.com)
                                     </div>
                                 </div>
                             </div>

@@ -71,7 +71,7 @@ ALTER TABLE users DROP COLUMN IF EXISTS full_name_bn;
 **Never test migrations on production first!**
 
 ```bash
-# On arint.win, in test environment
+# On grayhawks.com, in test environment
 cd /opt/bjdms-test
 
 # Apply migration
@@ -109,7 +109,7 @@ Migration reviewed for:
 
 **Execute**:
 ```bash
-ssh root@arint.win -p 25920
+ssh root@grayhawks.com -p 25920
 cd /opt/bjdms
 
 # Apply migration
@@ -125,7 +125,7 @@ docker-compose run --rm api migrate -path migrations -database "$DATABASE_URL" u
 docker-compose exec postgres psql -U bjdms_user -d bjdms_db -c "\d+ users"
 
 # Check application still works
-curl https://arint.win/api/v1/health
+curl https://grayhawks.com/api/v1/health
 ```
 
 ---

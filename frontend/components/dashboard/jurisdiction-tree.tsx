@@ -45,7 +45,7 @@ export function JurisdictionTree({ onSelect, activeId }: { onSelect?: (node: Jur
             <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground px-4 mb-4">Organizational Hierarchy</p>
             <div className="px-2">
                 {hierarchy.length > 0 ? hierarchy.map((node) => (
-                    <TreeNode key={node.id} node={node} depth={0} onSelect={onSelect} activeId={activeId} />
+                    <TreeNode node={node} depth={0} onSelect={onSelect} activeId={activeId} />
                 )) : (
                     <p className="text-center text-[10px] text-muted-foreground uppercase py-4">No Jurisdictions Configured</p>
                 )}

@@ -21,7 +21,7 @@ If this document is followed, execution, testing, and debugging will never leak 
 
 * ✅ All execution happens on remote server
 
-* ✅ Domain-based access via [https://arint.win](https://arint.win)
+* ✅ Domain-based access via [https://grayhawks.com](https://grayhawks.com)
 
 * ✅ Docker is the only runtime
 
@@ -37,7 +37,7 @@ Violation of this rule = architectural breach
 * SSH Access:
 
 ```bash
-ssh root@arint.win -p 25920
+ssh root@grayhawks.com -p 25920
 ```
 
 ---
@@ -101,12 +101,12 @@ ssh root@arint.win -p 25920
 
 ## Domain Routing Rules
 
-* [https://arint.win](https://arint.win) → NGINX
+* [https://grayhawks.com](https://grayhawks.com) → NGINX
 * NGINX → api service
 * Temporary preview paths allowed:
 
 ```
-https://arint.win/dev/*
+https://grayhawks.com/dev/*
 ```
 
 ---
@@ -137,7 +137,7 @@ https://arint.win/dev/*
 2. Code pushed to repository
 3. Human deploys to remote server
 4. Docker containers rebuilt
-5. Services accessible via arint.win
+5. Services accessible via grayhawks.com
 
 ---
 

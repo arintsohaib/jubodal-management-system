@@ -10,7 +10,7 @@ services:
       - "--entrypoints.web.address=:80"
       - "--entrypoints.websecure.address=:443"
       - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
-      - "--certificatesresolvers.myresolver.acme.email=admin@arint.win"
+      - "--certificatesresolvers.myresolver.acme.email=admin@grayhawks.com"
       - "--certificatesresolvers.myresolver.acme.storage=/letscert/acme.json"
     ports:
       - "80:80"
